@@ -1,0 +1,100 @@
+:root{
+	--primary-color: #6400e4;
+	--primary-text: #333;
+	--primary-background: #fff;
+}
+
+.darkmode{
+	--primary-color: #8541df;
+	--primary-text: #fff;
+	--primary-background: #444;
+}
+
+*{
+	margin: 0;
+	padding: 0;	
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+.container{
+	height: 100vh;
+	background-color: var(--primary-background);
+}
+
+form{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	border: 1px solid var(--primary-text);
+	border-radius: 0.5em;
+	padding: 2em 1.5em;
+	width: 25em;
+	max-width: 80%;
+	height: 26em;
+}
+
+form h1{
+	margin: 0.5em 0 1.8em 0;
+	color: var(--primary-text)
+}
+
+form label{
+	display: block;
+	margin-bottom: 0.3em;
+	font-weight: bold;
+	color: var(--primary-text);
+	font-size: 0.8em;
+}
+
+form input{
+	display: block;
+	margin-bottom: 1.5em;
+	width: 100%;
+	padding: 0.2em 0.5em;
+	border: 1px solid var(--primary-text);
+	color: var(--primary-text);
+	background-color: var(--primary-background);
+	border-radius: 0.3em;
+	height: 3em;
+	outline: none;
+}
+
+form input:focus{
+	border: 2px solid var(--primary-color);
+}
+
+form input[type=submit]{
+	cursor: pointer;
+	border: none;
+	background-color: var(--primary-color);
+	color: #fff;
+	font-weight: bold;
+	padding: 1em 0em;
+	font-size: 1rem;
+	margin-top: 2em;
+	border-radius: 0.1em;
+}
+
+.toggle{
+	font-size: 2rem;
+	color: var(--primary-color);
+	cursor: pointer;
+	position: relative;
+	top: 0.5em;
+	left: 0.5em;
+}
+
+@media (max-width: 520px){
+	form{
+		border: none;
+		padding: 1em;
+		margin-top: 2em;
+		max-width: 100%;
+	}
+	form h1{
+		font-size: 1.7rem;
+		margin: 0.8em 0 1.4em;
+	}
+}
