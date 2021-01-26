@@ -1,5 +1,4 @@
 let darkmode = localStorage.getItem('darkmode');
-
 const toggle = document.querySelector('.toggle');
 
 function enableDarkmode(){
@@ -22,13 +21,6 @@ if (darkmode == 'enabled'){
     enableDarkmode();
 }
 
-toggle.addEventListener('click', () =>{
-    darkmode = localStorage.getItem('darkmode');
-  
-    if (darkmode != 'enabled'){
-        enableDarkmode();
-    } 
-    else{  
-        disableDarkmode(); 
-    }
+toggle.addEventListener('click', () =>{  
+    darkmode != 'enabled' ? enableDarkmode() : disableDarkmode(); 
 });
